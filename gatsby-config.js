@@ -2,15 +2,18 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-const adapter = require("gatsby-adapter-netlify")
+//const adapter = require("gatsby-adapter-netlify")
 
 module.exports = {
   siteMetadata: {
     title: `jlonuz-portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-  adapter: adapter({
-    excludeDatastoreFromEngineFunction: false,
-  }),
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+  ],
+  // adapter: adapter({
+  //   excludeDatastoreFromEngineFunction: false,
+  // }),
 }
